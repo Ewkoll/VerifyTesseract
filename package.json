@@ -1,0 +1,26 @@
+{
+  "name": "verifytesseract",
+  "version": "1.0.0",
+  "description": "verify tesseract",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ewkoll/VerifyTesseract.git"
+  },
+  "keywords": [
+    "ewkoll"
+  ],
+  "author": "ewkoll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ewkoll/VerifyTesseract/issues"
+  },
+  "homepage": "https://github.com/Ewkoll/VerifyTesseract#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "tesseract.js": "^2.1.1"
+  }
+}
