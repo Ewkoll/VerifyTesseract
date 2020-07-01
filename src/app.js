@@ -48,12 +48,11 @@ module.exports = function () {
         })
     }
 
-    app.download_captcha = async function () {
+    app.download_captcha = async function (captcha_count) {
         let driver = await new Builder().forBrowser('chrome').build();
         try {
             await driver.get('http://qmeuat.jiajiaexchange.com/#/');
             const el_link__inner = driver.findElement(By.className('el-link--inner'));
-            let captcha_count = 5000;
             const injectJS = 'return document.getElementById("s-canvas").toDataURL()';
             do {
                 const captcha_image = await driver.executeScript(injectJS);

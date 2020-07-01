@@ -14,8 +14,8 @@ module.exports = function () {
             logger: m => console.log(m)
         });
         await worker.load();
-        await worker.loadLanguage('captcha');
-        await worker.initialize('captcha');
+        await worker.loadLanguage('eng.normal');
+        await worker.initialize('eng.normal');
         await worker.setParameters({
             tessedit_char_whitelist: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ',
         });
@@ -36,8 +36,8 @@ module.exports = function () {
             logger: m => console.log(m)
         });
         await worker.load();
-        await worker.loadLanguage('captcha');
-        await worker.initialize('captcha');
+        await worker.loadLanguage('eng.normal');
+        await worker.initialize('eng.normal');
         await worker.setParameters({
             tessedit_char_whitelist: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ',
         });
@@ -56,5 +56,6 @@ module.exports = function () {
     captcha.terminate = async function() {
         await captcha.worker.terminate();
     }
+    
     return captcha
 }
